@@ -26,18 +26,19 @@
 
         <form>
             <label for="nome">Nome:</label> <br>
-            <input type="text" id="nome">
-            <br>
+            <input type="text" id="nome" onkeyup="validaNome()">
+            <div id="txtNome"></div>
             <br>
             <label for="email">e-mail:</label> <br>
-            <input type="email" id="email">
-            <br>
+            <input type="email" id="email" onkeyup="validaEmail()">
+            <div id="txtEmail"></div>
             <br>
             <label for="assunto">Assunto:</label> <br>
-            <textarea name="assunto" id="assunto" cols="60" rows="5"></textarea>
+            <textarea name="assunto" id="assunto" cols="60" rows="5" onkeyup="validaAssunto()"></textarea>
+            <div id="txtAssunto"></div>
             <br>
             <br>
-            <button>Enviar</button>
+            <button onclick="enviar()">Enviar</button>
     
         </form>
         </div>
@@ -45,10 +46,10 @@
         <div class="ml-50">
             <p>Thomaskirchhof 18, 04109</p>
             <p>Leipzig, Alemanha</p>
-            <iframe
+            <iframe 
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2492.4663381837995!2d12.370355515763787!3d51.33933487960779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a6f826c481919b%3A0x2d6b218cc94b79e8!2zSWdyZWphIGRlIFPDo28gVG9tw6Fz!5e0!3m2!1spt-BR!2sbr!4v1656442864833!5m2!1spt-BR!2sbr"
             width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+            referrerpolicy="no-referrer-when-downgrade" onmousemove="mapaZoom()" onmouseout="mapaNormal()" id="mapa"></iframe>
         </div>
     </div>
 
@@ -81,7 +82,7 @@
     </footer>
     
 
-    
+    <script src="assets/js/script.js"></script>
     
 </body>
 
